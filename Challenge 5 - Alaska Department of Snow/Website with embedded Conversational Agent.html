@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Il Mio Sito Web</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #0077cc;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    section {
+      margin: 20px 0;
+      background-color: white;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    button {
+      padding: 10px 20px;
+      margin-right: 10px;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    df-messenger {
+      z-index: 999;
+      position: fixed;
+      --df-messenger-font-color: #000;
+      --df-messenger-font-family: Google Sans;
+      --df-messenger-chat-background: #f3f6fc;
+      --df-messenger-message-user-background: #d3e3fd;
+      --df-messenger-message-bot-background: #fff;
+      bottom: 16px;
+      right: 16px;
+    }
+  </style>
+
+  <!-- Dialogflow Messenger -->
+  <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+  <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+</head>
+<body>
+
+  <header>
+    <h1>Benvenuto nel mio sito web!</h1>
+    <p>Un piccolo spazio per imparare, creare e sorridere 🌟</p>
+  </header>
+
+  <section>
+    <h2>Ciao Federico!</h2>
+    <p>Questa è una semplice pagina HTML con integrazione di un assistente virtuale. È un ottimo punto di partenza per esplorare il mondo del web!</p>
+    <p>“La vita è bella!” – non dimenticarlo mai.</p>
+  </section>
+
+  <section>
+    <h3>Perché usare HTML semplice?</h3>
+    <p>A volte, la semplicità è la soluzione migliore. Niente framework, solo codice chiaro e diretto.</p>
+    <p>“Chi va piano, va sano e va lontano.”</p>
+  </section>
+
+  <section>
+    <h3>Azioni rapide</h3>
+    <button onclick="alert('Hai cliccato il primo bottone!')">Cliccami!</button>
+    <button onclick="console.log('Hai cliccato il secondo bottone!')">Scrivi nella console</button>
+    <p>“Il meglio deve ancora venire.”</p>
+  </section>
+
+  <!-- Dialogflow Messenger Agent -->
+  <df-messenger
+    location="us-central1"
+    project-id="qwiklabs-gcp-00-711e7fbdb4c8"
+    agent-id="9812e48e-cd39-4265-997f-cf36373b4310"
+    language-code="en"
+    max-query-length="-1">
+    <df-messenger-chat-bubble
+      chat-title="Alaska Department of Snow Online Agent">
+    </df-messenger-chat-bubble>
+  </df-messenger>
+
+</body>
+</html>
